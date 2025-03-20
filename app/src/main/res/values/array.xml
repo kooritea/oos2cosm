@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="module_scope">
+        <item>android</item>
+        <item>com.oplus.account</item>
+        <item>com.oplus.notificationmanager</item>
+        <item>com.oplus.battery</item>
+    </string-array>
+</resources>
