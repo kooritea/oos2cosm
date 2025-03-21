@@ -15,12 +15,6 @@ import java.lang.reflect.Modifier
 @InjectYukiHookWithXposed
 class HookEntry : IYukiHookXposedInit {
 
-    companion object {
-        init {
-            System.loadLibrary("dexkit")
-        }
-    }
-
     override fun onInit() = configs {
         debugLog {
             isEnable = false
@@ -89,6 +83,7 @@ class HookEntry : IYukiHookXposedInit {
             }
         }
         loadApp(name = "com.oplus.battery"){
+            System.loadLibrary("dexkit")
             DexKitBridge.create(appInfo.sourceDir).use { bridge ->
                 bridge.findClass {
                     matcher {
